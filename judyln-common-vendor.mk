@@ -115,6 +115,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/judyln-common/proprietary/vendor/lib/camera/titan17x_usecases.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/titan17x_usecases.bin
 
 PRODUCT_PACKAGES += \
+    audio.primary.judyln \
+    libaudio_log_utils \
     com.qti.eisv2 \
     com.qti.eisv3 \
     com.qti.stats.aec \
