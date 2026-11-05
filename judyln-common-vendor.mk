@@ -6,6 +6,12 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lge/judyln-common
 
 PRODUCT_COPY_FILES += \
+    vendor/lge/judyln-common/proprietary/product/etc/permissions/com.lge.cinemagraph.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.lge.cinemagraph.xml \
+    vendor/lge/judyln-common/proprietary/product/etc/permissions/privapp-permissions-lg-camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lg-camera.xml \
+    vendor/lge/judyln-common/proprietary/system_ext/etc/camera_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/camera_config.xml \
+    vendor/lge/judyln-common/proprietary/system_ext/etc/permissions/com.lge.camerasolution.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.lge.camerasolution.xml \
+    vendor/lge/judyln-common/proprietary/system_ext/etc/solution_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/solution_config.xml \
+    vendor/lge/judyln-common/proprietary/system_ext/etc/sysconfig/lge_camera_hiddenapi_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/lge_camera_hiddenapi_whitelist.xml \
     vendor/lge/judyln-common/proprietary/vendor/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/lge/judyln-common/proprietary/vendor/etc/acdbdata/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Codec_cal.acdb \
     vendor/lge/judyln-common/proprietary/vendor/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/General_cal.acdb \
@@ -14,7 +20,191 @@ PRODUCT_COPY_FILES += \
     vendor/lge/judyln-common/proprietary/vendor/etc/acdbdata/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Hdmi_cal.acdb \
     vendor/lge/judyln-common/proprietary/vendor/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Headset_cal.acdb \
     vendor/lge/judyln-common/proprietary/vendor/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Speaker_cal.acdb \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/auxpackagelist.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/auxpackagelist.txt \
     vendor/lge/judyln-common/proprietary/vendor/etc/camera/camera_tune_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_tune_config.xml \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/10_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/10_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/10_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/10_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/10_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/10_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/10_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/10_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/11_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/11_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/11_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/11_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/11_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/11_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/11_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/11_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/12_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/12_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/12_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/12_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/12_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/12_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/13_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/13_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/13_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/13_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/13_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/13_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/14_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/14_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/14_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/14_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/14_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/14_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/15_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/15_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/15_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/15_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/15_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/15_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/16_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/16_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/16_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/16_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/16_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/16_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/17_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/17_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/18_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/18_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/19_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/19_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/1_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/1_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/1_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/1_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/1_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/1_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/1_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/1_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/20_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/20_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/21_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/21_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/2_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/2_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/2_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/2_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/2_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/2_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/2_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/2_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/3_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/3_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/3_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/3_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/3_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/3_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/3_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/3_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/4_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/4_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/4_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/4_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/4_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/4_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/4_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/4_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/5_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/5_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/5_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/5_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/5_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/5_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/5_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/5_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/6_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/6_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/6_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/6_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/6_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/6_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/6_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/6_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/7_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/7_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/7_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/7_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/7_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/7_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/7_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/7_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/8_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/8_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/8_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/8_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/8_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/8_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/8_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/8_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/9_cine-max.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/9_cine-max.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/9_cine-min.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/9_cine-min.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/9_cine_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/9_cine_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/9_vignette.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/9_vignette.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/cinema/cine_min_10.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cinema/cine_min_10.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/0_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/0_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/10_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/10_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/1_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/1_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/2_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/2_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/3_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/3_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/4_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/4_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/5_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/5_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/6_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/6_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/7_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/7_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/8_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/8_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/film/9_film.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/film/9_film.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/0_smartcam.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/0_smartcam.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/10_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/10_smartcam_food.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/11_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/11_smartcam_food.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/12_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/12_smartcam_food.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/13_1_H_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/13_1_H_smartcam_person_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/13_2_L_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/13_2_L_smartcam_person_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/13_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/13_smartcam_person_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/14_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/14_smartcam_person_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/15_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/15_smartcam_person_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/16_smartcam_person_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/16_smartcam_person_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/17_1_H_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/17_1_H_smartcam_landscape.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/17_2_L_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/17_2_L_smartcam_landscape.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/17_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/17_smartcam_landscape.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/18_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/18_smartcam_landscape.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/19_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/19_smartcam_landscape.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/1_1_H_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/1_1_H_smartcam_pet.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/1_2_L_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/1_2_L_smartcam_pet.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/1_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/1_smartcam_pet.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/20_smartcam_landscape.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/20_smartcam_landscape.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/21_1_H_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/21_1_H_smartcam_sunset_sunrise.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/21_2_L_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/21_2_L_smartcam_sunset_sunrise.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/21_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/21_smartcam_sunset_sunrise.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/22_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/22_smartcam_sunset_sunrise.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/23_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/23_smartcam_sunset_sunrise.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/24_smartcam_sunset_sunrise.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/24_smartcam_sunset_sunrise.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/25_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/25_smartcam_flower.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/26_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/26_smartcam_flower.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/27_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/27_smartcam_flower.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/28_smartcam_flower.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/28_smartcam_flower.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/29_1_H_smartcam_people_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/29_1_H_smartcam_people_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/29_2_L_smartcam_people_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/29_2_L_smartcam_people_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/29_smartcam_people_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/29_smartcam_people_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/2_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/2_smartcam_pet.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/30_smartcam_people_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/30_smartcam_people_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/31_smartcam_people_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/31_smartcam_people_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/32_smartcam_people_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/32_smartcam_people_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/33_1_H_smartcam_baby_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/33_1_H_smartcam_baby_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/33_2_L_smartcam_baby_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/33_2_L_smartcam_baby_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/33_smartcam_baby_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/33_smartcam_baby_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/34_smartcam_baby_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/34_smartcam_baby_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/35_smartcam_baby_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/35_smartcam_baby_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/36_smartcam_baby_rear.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/36_smartcam_baby_rear.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/37_smartcam_animal.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/37_smartcam_animal.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/38_smartcam_animal.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/38_smartcam_animal.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/39_smartcam_animal.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/39_smartcam_animal.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/3_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/3_smartcam_pet.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/40_smartcam_animal.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/40_smartcam_animal.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/41_1_H_smartcam_beverage.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/41_1_H_smartcam_beverage.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/41_2_L_smartcam_beverage.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/41_2_L_smartcam_beverage.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/41_smartcam_beverage.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/41_smartcam_beverage.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/42_smartcam_beverage.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/42_smartcam_beverage.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/43_smartcam_beverage.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/43_smartcam_beverage.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/44_smartcam_beverage.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/44_smartcam_beverage.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/45_smartcam_fruit.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/45_smartcam_fruit.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/46_smartcam_fruit.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/46_smartcam_fruit.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/47_smartcam_fruit.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/47_smartcam_fruit.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/48_smartcam_fruit.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/48_smartcam_fruit.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/49_smartcam_snow.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/49_smartcam_snow.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/4_smartcam_pet.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/4_smartcam_pet.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/50_smartcam_snow.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/50_smartcam_snow.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/51_smartcam_snow.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/51_smartcam_snow.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/52_smartcam_snow.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/52_smartcam_snow.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/53_1_H_smartcam_sky.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/53_1_H_smartcam_sky.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/53_2_L_smartcam_sky.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/53_2_L_smartcam_sky.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/53_smartcam_sky.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/53_smartcam_sky.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/54_smartcam_sky.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/54_smartcam_sky.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/55_smartcam_sky.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/55_smartcam_sky.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/56_smartcam_sky.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/56_smartcam_sky.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/57_smartcam_beach.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/57_smartcam_beach.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/58_smartcam_beach.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/58_smartcam_beach.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/59_smartcam_beach.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/59_smartcam_beach.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/5_1_H_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/5_1_H_smartcam_city.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/5_2_L_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/5_2_L_smartcam_city.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/5_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/5_smartcam_city.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/60_smartcam_beach.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/60_smartcam_beach.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/61_smartcam_lowlight.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/61_smartcam_lowlight.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/62_smartcam_lowlight.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/62_smartcam_lowlight.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/63_smartcam_lowlight.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/63_smartcam_lowlight.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/64_smartcam_lowlight.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/64_smartcam_lowlight.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/65_1_H_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/65_1_H_smartcam_person_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/65_2_L_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/65_2_L_smartcam_person_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/65_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/65_smartcam_person_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/66_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/66_smartcam_person_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/67_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/67_smartcam_person_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/68_smartcam_person_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/68_smartcam_person_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/69_1_H_smartcam_people_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/69_1_H_smartcam_people_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/69_2_L_smartcam_people_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/69_2_L_smartcam_people_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/69_smartcam_people_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/69_smartcam_people_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/6_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/6_smartcam_city.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/70_smartcam_people_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/70_smartcam_people_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/71_smartcam_people_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/71_smartcam_people_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/72_smartcam_people_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/72_smartcam_people_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/73_1_H_smartcam_baby_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/73_1_H_smartcam_baby_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/73_2_L_smartcam_baby_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/73_2_L_smartcam_baby_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/73_smartcam_baby_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/73_smartcam_baby_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/74_smartcam_baby_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/74_smartcam_baby_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/75_smartcam_baby_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/75_smartcam_baby_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/76_smartcam_baby_front.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/76_smartcam_baby_front.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/7_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/7_smartcam_city.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/8_smartcam_city.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/8_smartcam_city.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/91_smartcam_basic_01.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/91_smartcam_basic_01.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/92_smartcam_basic_02.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/92_smartcam_basic_02.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/93_smartcam_basic_03.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/93_smartcam_basic_03.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/94_smartcam_basic_04.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/94_smartcam_basic_04.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/9_1_H_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/9_1_H_smartcam_food.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/9_2_L_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/9_2_L_smartcam_food.dat \
+    vendor/lge/judyln-common/proprietary/vendor/etc/camera/smartcam/9_smartcam_food.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/smartcam/9_smartcam_food.dat \
     vendor/lge/judyln-common/proprietary/vendor/etc/camera/vnr/SJ_VideoNR_LUT.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vnr/SJ_VideoNR_LUT.bin \
     vendor/lge/judyln-common/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service-qti.rc \
     vendor/lge/judyln-common/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
@@ -142,6 +332,7 @@ PRODUCT_PACKAGES += \
     libsnsapi \
     libsnsdiaglog \
     libssc \
+    libswregistrationalgo \
     libsymphony-1.1.4 \
     libsymphonypower-1.1.4 \
     sensors.sar \
@@ -268,12 +459,47 @@ PRODUCT_PACKAGES += \
     com.qti.stats.haf \
     com.qti.stats.localhistogram \
     libpn553_fw_64 \
+    libAutoContrast_system_ext \
+    libLGCameraSolution-jni \
+    libOpenCL_system \
+    libSNPE_G \
+    libSRIyuv_system_ext \
+    libarcsoft_beauty_picselfie_system_ext \
+    libarcsoft_dualcam_portraitlighting_system_ext \
+    libarcsoft_dualcam_refocus_system_ext \
+    libarcsoft_dualcam_refocus_front_system_ext \
+    libarcsoft_dualcam_refocus_rear_t_system_ext \
+    libarcsoft_makeup_system_ext \
+    libarcsoft_picselfie_algorithm_system_ext \
+    libarcsoft_singlecam_portrait_lighting_system_ext \
+    libc++_shared_system_ext \
+    libcvp2_system_ext \
+    libcvp2_hfi_system_ext \
+    libcvp_common_system_ext \
+    libdepthmapdecoder.arcsoft_system_ext \
+    libdualcameraddm \
+    libjni_dualcamera \
+    liblgcamera_jni \
+    liblghdri_system_ext \
+    liblgsnpedeflickerclassifier \
+    liblgsnpewsunet \
+    libmorpho_deflicker_image \
+    libmorpho_image_stab31_system_ext \
+    libmorpho_wdr2 \
+    libmpbase_system_ext \
+    LgeResourcesPort \
+    Cineshot \
+    LGCameraApp \
+    LGCameraSolution \
+    com.lge.camerasolution \
     chre \
     vendor.qti.hardware.sensorscalibrate@1.0-service \
     sensors.qti \
     sscrpcd
 
 PRODUCT_PACKAGES += \
+    system_ext_lib64_libAutoContrast-jni_so \
+    system_ext_lib64_libmorpho_wdr2-jni_so \
     vendor_firmware_wlan_qca_cld_bdwlan_bin \
     vendor_firmware_wlan_qca_cld_bdwlan_ch0_bin \
     vendor_firmware_wlan_qca_cld_bdwlan_ch1_bin

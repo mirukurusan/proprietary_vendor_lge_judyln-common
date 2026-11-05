@@ -1176,6 +1176,54 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libswregistrationalgo",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libswregistrationalgo.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libcdsprpc",
+                "libsnsapi",
+                "libqmi_common_so",
+                "libqmi_cci",
+                "libqmi_encdec",
+                "libprotobuf-cpp-full-vendorcompat",
+                "libhardware",
+                "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libswregistrationalgo.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libz",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsymphony-1.1.4",
     owner: "lge",
     strip: {
@@ -4737,6 +4785,855 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+cc_prebuilt_library_shared {
+    name: "libAutoContrast_system_ext",
+    stem: "libAutoContrast",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libAutoContrast.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libLGCameraSolution-jni",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libLGCameraSolution-jni.so",
+            ],
+            shared_libs: [
+                "libhardware",
+                "libandroid",
+                "libcutils",
+                "libion",
+                "libarcsoft_beauty_picselfie_system_ext",
+                "libarcsoft_picselfie_algorithm_system_ext",
+                "libmpbase_system_ext",
+                "libarcsoft_dualcam_refocus_front_system_ext",
+                "libarcsoft_dualcam_refocus_rear_t_system_ext",
+                "libarcsoft_dualcam_refocus_system_ext",
+                "libarcsoft_dualcam_portraitlighting_system_ext",
+                "libdepthmapdecoder.arcsoft_system_ext",
+                "libcvp_common_system_ext",
+                "libcvp2_system_ext",
+                "libcvp2_hfi_system_ext",
+                "libarcsoft_makeup_system_ext",
+                "libarcsoft_singlecam_portrait_lighting_system_ext",
+                "libAutoContrast_system_ext",
+                "libmorpho_wdr2",
+                "liblghdri_system_ext",
+                "libmorpho_image_stab31_system_ext",
+                "libSRIyuv_system_ext",
+                "libpng",
+                "liblgsnpewsunet",
+                "libmorpho_deflicker_image",
+                "liblgsnpedeflickerclassifier",
+                "libSNPE_G",
+                "libc++_shared_system_ext",
+                "liblog",
+                "libjnigraphics",
+                "libGLESv3",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCL_system",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libOpenCL_system.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libvndksupport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSNPE_G",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libSNPE_G.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "liblog",
+                "libc++_shared_system_ext",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSRIyuv_system_ext",
+    stem: "libSRIyuv",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libSRIyuv.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_beauty_picselfie_system_ext",
+    stem: "libarcsoft_beauty_picselfie",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_beauty_picselfie.so",
+            ],
+            shared_libs: [
+                "libarcsoft_picselfie_algorithm_system_ext",
+                "libmpbase_system_ext",
+                "liblog",
+                "libGLESv2",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_dualcam_portraitlighting_system_ext",
+    stem: "libarcsoft_dualcam_portraitlighting",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_dualcam_portraitlighting.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "libOpenCL",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_dualcam_refocus_system_ext",
+    stem: "libarcsoft_dualcam_refocus",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_dualcam_refocus.so",
+            ],
+            shared_libs: [
+                "libarcsoft_dualcam_refocus_rear_t_system_ext",
+                "libarcsoft_dualcam_refocus_front_system_ext",
+                "libmpbase_system_ext",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_dualcam_refocus_front_system_ext",
+    stem: "libarcsoft_dualcam_refocus_front",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_dualcam_refocus_front.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "libcvp2_system_ext",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_dualcam_refocus_rear_t_system_ext",
+    stem: "libarcsoft_dualcam_refocus_rear_t",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_dualcam_refocus_rear_t.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "libcvp2_system_ext",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_makeup_system_ext",
+    stem: "libarcsoft_makeup",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_makeup.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_picselfie_algorithm_system_ext",
+    stem: "libarcsoft_picselfie_algorithm",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_picselfie_algorithm.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_singlecam_portrait_lighting_system_ext",
+    stem: "libarcsoft_singlecam_portrait_lighting",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libarcsoft_singlecam_portrait_lighting.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "libOpenCL",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libc++_shared_system_ext",
+    stem: "libc++_shared",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libc++_shared.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp2_system_ext",
+    stem: "libcvp2",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libcvp2.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libcvp_common_system_ext",
+                "libcvp2_hfi_system_ext",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp2_hfi_system_ext",
+    stem: "libcvp2_hfi",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libcvp2_hfi.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp_common_system_ext",
+    stem: "libcvp_common",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libcvp_common.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdepthmapdecoder.arcsoft_system_ext",
+    stem: "libdepthmapdecoder.arcsoft",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdepthmapdecoder.arcsoft.so",
+            ],
+            shared_libs: [
+                "libmpbase_system_ext",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdualcameraddm",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdualcameraddm.so",
+            ],
+            shared_libs: [
+                "libz",
+                "libdl",
+                "liblog",
+                "libm",
+                "libstdc++",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_dualcamera",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libjni_dualcamera.so",
+            ],
+            shared_libs: [
+                "libdualcameraddm",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblgcamera_jni",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/liblgcamera_jni.so",
+            ],
+            shared_libs: [
+                "libandroid_runtime",
+                "libnativehelper",
+                "libutils",
+                "libcutils",
+                "libhidlbase",
+                "libhidltransport",
+                "libgui",
+                "liblog",
+                "libcamera_client",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblghdri_system_ext",
+    stem: "liblghdri",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/liblghdri.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblgsnpedeflickerclassifier",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/liblgsnpedeflickerclassifier.so",
+            ],
+            shared_libs: [
+                "libSNPE_G",
+                "libc++_shared_system_ext",
+                "liblog",
+                "libGLESv2",
+                "libEGL",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblgsnpewsunet",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/liblgsnpewsunet.so",
+            ],
+            shared_libs: [
+                "libSNPE_G",
+                "libc++_shared_system_ext",
+                "liblog",
+                "libGLESv2",
+                "libEGL",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmorpho_deflicker_image",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libmorpho_deflicker_image.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libEGL",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmorpho_image_stab31_system_ext",
+    stem: "libmorpho_image_stab31",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libmorpho_image_stab31.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmorpho_wdr2",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libmorpho_wdr2.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libvulkan",
+                "libGLESv3",
+                "libEGL",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmpbase_system_ext",
+    stem: "libmpbase",
+    owner: "lge",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libmpbase.so",
+            ],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "LgeResourcesPort",
+    owner: "lge",
+    apk: "proprietary/system/priv-app/LgeResourcesPort/LgeResourcesPort.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+android_app_import {
+    name: "Cineshot",
+    owner: "lge",
+    apk: "proprietary/product/priv-app/Cineshot/Cineshot.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+android_app_import {
+    name: "LGCameraApp",
+    owner: "lge",
+    apk: "proprietary/product/priv-app/LGCameraApp/LGCameraApp.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+android_app_import {
+    name: "LGCameraSolution",
+    owner: "lge",
+    apk: "proprietary/system_ext/priv-app/LGCameraSolution/LGCameraSolution.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "com.lge.camerasolution",
+    owner: "lge",
+    jars: [
+        "proprietary/system_ext/framework/com.lge.camerasolution.jar",
+    ],
+    system_ext_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "chre",
     owner: "lge",
@@ -4851,6 +5748,20 @@ cc_prebuilt_binary {
     },
     prefer: true,
     soc_specific: true,
+}
+
+install_symlink {
+    name: "system_ext_lib64_libAutoContrast-jni_so",
+    system_ext_specific: true,
+    installed_location: "lib64/libAutoContrast-jni.so",
+    symlink_target: "/system_ext/lib64/libAutoContrast.so",
+}
+
+install_symlink {
+    name: "system_ext_lib64_libmorpho_wdr2-jni_so",
+    system_ext_specific: true,
+    installed_location: "lib64/libmorpho_wdr2-jni.so",
+    symlink_target: "/system_ext/lib64/libmorpho_wdr2.so",
 }
 
 install_symlink {
