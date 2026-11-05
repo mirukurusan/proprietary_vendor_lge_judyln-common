@@ -3999,7 +3999,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.sdm845",
+    name: "camera.sdm845.orig",
+    stem: "camera.sdm845.orig",
     owner: "lge",
     strip: {
         none: true,
@@ -4007,7 +4008,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/hw/camera.sdm845.so",
+                "proprietary/vendor/lib/hw/camera.sdm845.orig.so",
             ],
             shared_libs: [
                 "libc++",
@@ -4034,6 +4035,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     relative_install_path: "hw",
     prefer: true,
     soc_specific: true,

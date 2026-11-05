@@ -429,7 +429,7 @@ PRODUCT_PACKAGES += \
     liblg_awb_param_imx351w_sum_binning \
     liblg_awb_param_imx351w_video \
     liblg_awb_param_imx351w_zsl \
-    camera.sdm845 \
+    camera.sdm845.orig \
     com.qti.chi.override \
     lib.com.lge.elvis \
     libAutoContrast \
